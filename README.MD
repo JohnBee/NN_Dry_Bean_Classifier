@@ -1,5 +1,6 @@
 # Dry Bean Dataset Classifier
 A Classifier that operates on the Dry Bean Dataset from UCI Machine Learning Dataset Repository.
+
 # Requirements
 - Python > 3.6
 - Numpy
@@ -7,21 +8,56 @@ A Classifier that operates on the Dry Bean Dataset from UCI Machine Learning Dat
 - SciKit-Learn
 - Matplotlib
 
-# STEPS
-Check Data for Missing Values/ Error Values - Contains None
+# Dry Bean Dataset
 
-Use Scatter matrix to identify variables with correlation
+[https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset](https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset)
+
+Reference:
+
+KOKLU, M. and OZKAN, I.A., (2020), “Multiclass Classification of Dry Beans Using Computer Vision and Machine Learning Techniques.” Computers and Electronics in Agriculture, 174, 105507.
+DOI: https://doi.org/10.1016/j.compag.2020.105507
+
+## Data cleanup
+Exported the .xlsx Dataset as a .csv to be read in to the Python Script.
+
+The data was checked for missing value and none wear found. This corroborates with the dataset description file.
+
+A Scatter matrix was used to explore the data. There can be several features seen which strong correlation that perhaps could be removed.
+
+![Scatter](https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/correlation_scatter_plot.png)
 
 Scale the data using Min-Max Scaler and Apply PCA
 
 PCA (Principal Component Analysis)
 
-Grid Search for optimal parameters
+## Neural Network Parameters
+Grid Search was used to find parameters for the MLP Classifier.
+```commandline
+Parameters:
+Hidders Layer Architecture: (50, 50, 50)
+activation: tanh
+solver: adam
+learning_rate: constant
+alpha: 0.0001
+```
 
-Plot Confusion matrix for Train
+The performance with PCA was lower than the performance without PCA applied.
+```commandline
+Accuracy Without PCA: 93%
+Accuracy With PCA: 91%
+```
+Therefore PCA was removed.
+## Performance
+### Training set Confusion plot
+From the confusion plot it can be seen that the classifer commonly incorrectly predicts that a seed of type SIRA as DERMASON.
 
-Expected performance less than Seen in paper.
+![train_confusion_plot_post_pca_removal](https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/training_confusion_plot_1.png)
 
-Removing PCA and using whole dataset. 91% accuracy same as the paper.
-
-Accuracy Score for Test Set: 91% Accuracy
+## Final test set performance
+Accuracy Score for Test Set: 91% Accuracy which is the same to the accuracy recorded in the research paper when using MLP for Dry Bean Classification.
+```commandline
+Accuracy: 91.04%
+```
+### Final Test Set confusion plot:
+Again, the MLP Classifer incorrectly classifies some SIRA as DERMASON, further work may be required to identify the cause.
+![test_confusion_plot](https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/test_confusion_plot_1.png)

@@ -159,12 +159,14 @@ if __name__ == "__main__":
     train_x_tr = num_pipeline.fit_transform(train_x)
     test_x_tr = num_pipeline.fit_transform(test_x)
 
-    # do_grid_search(train_x_tr, train_y)
+    #do_grid_search(train_x_tr, train_y)
 
     mlp = MLPClassifier(hidden_layer_sizes=(50, 50, 50), random_state=11, max_iter=700, verbose=False,
-                        activation='tanh', solver='adam', learning_rate='constant', alpha=0.0001)
+                       activation='tanh', solver='adam', learning_rate='constant', alpha=0.0001)
+
     mlp.fit(train_x_tr, train_y)
-    print(do_accuracy_score(mlp, test_x_tr, test_y)) #0.9103929489533603
+    print(do_accuracy_score(mlp, train_x_tr, train_y))
+    #print(do_accuracy_score(mlp, test_x_tr, test_y)) #0.9103929489533603
 
     # do_confusion_matrix(mlp, train_x_tr, train_y)
     # do_confusion_matrix(mlp, test_x_tr, test_y)
