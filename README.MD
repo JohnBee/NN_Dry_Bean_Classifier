@@ -23,9 +23,11 @@ Exported the .xlsx Dataset as a .csv to be read in to the Python Script.
 The data was checked for missing value and none wear found. This corroborates with the dataset description file.
 
 A Scatter matrix was used to explore the data. There can be several features seen which strong correlation that perhaps could be removed.
+
 <picture>
-<img src=https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/correlation_scatter_plot.png =x200 with=200 />
+<img alt="scatter plot" src=https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/correlation_scatter_plot.png =x200 with=200 />
 </picture>
+
 Scale the data using Min-Max Scaler and Apply PCA
 
 PCA (Principal Component Analysis)
