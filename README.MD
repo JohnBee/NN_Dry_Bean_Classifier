@@ -53,7 +53,9 @@ Therefore PCA was removed.
 ### Training set Confusion plot
 From the confusion plot it can be seen that the classifer commonly incorrectly predicts that a seed of type SIRA as DERMASON.
 
-![train_confusion_plot_post_pca_removal](https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/training_confusion_plot_1.png =x200)
+<picture>
+<img alt="train_confusion_plot_post_pca_removal" src=https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/training_confusion_plot_1.png width="800"/>
+</picture>
 
 ## Final test set performance
 Accuracy Score for Test Set: 91% Accuracy which is the same to the accuracy recorded in the research paper when using MLP for Dry Bean Classification.
@@ -62,4 +64,6 @@ Accuracy: 91.04%
 ```
 ### Final Test Set confusion plot:
 Again, the MLP Classifer incorrectly classifies some SIRA as DERMASON, further work may be required to identify the cause.
-![test_confusion_plot](https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/test_confusion_plot_1.png =x200)
+<picture>
+<img alt="test_confusion_plot" src=https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/test_confusion_plot_1.png width=800/>
+</picture>
