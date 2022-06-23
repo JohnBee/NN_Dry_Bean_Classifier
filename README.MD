@@ -51,7 +51,7 @@ Accuracy With PCA: 91%
 Therefore PCA was removed.
 ## Performance
 ### Training set Confusion plot
-From the confusion plot it can be seen that the classifer commonly incorrectly predicts that a seed of type SIRA as DERMASON.
+The confusion plot shows a strong correct classification rate with many incorrect classifcations being small with exception to the incorrect prediction that a seed of type SIRA is a DERMASON.
 
 <picture>
 <img alt="train_confusion_plot_post_pca_removal" src=https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/training_confusion_plot_1.png width="400"/>
@@ -64,6 +64,7 @@ Accuracy: 91.04%
 ```
 ### Final Test Set confusion plot:
 Again, the MLP Classifer incorrectly classifies some SIRA as DERMASON, further work may be required to identify the cause.
+
 <picture>
 <img alt="test_confusion_plot" src=https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/test_confusion_plot_1.png width=400/>
 </picture>
