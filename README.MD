@@ -25,7 +25,7 @@ The data was checked for missing value and none wear found. This corroborates wi
 A Scatter matrix was used to explore the data. There can be several features seen which strong correlation that perhaps could be removed.
 
 <picture>
-<img alt="scatter plot" src=https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/correlation_scatter_plot.png width=200 />
+<img alt="scatter plot" src=https://github.com/JohnBee/NN_Dry_Bean_Classifier/blob/main/plots/correlation_scatter_plot.png width=800 />
 </picture>
 
 Scale the data using Min-Max Scaler and Apply PCA
